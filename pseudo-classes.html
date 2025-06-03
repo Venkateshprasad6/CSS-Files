@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pseudo-class Demo</title>
+  <style>
+    /* :hover */
+    button:hover {
+      background-color: lightblue;
+    }
+
+    /* :active */
+    button:active {
+      background-color: deepskyblue;
+      transform: scale(0.98);
+    }
+
+    /* :focus */
+    input:focus {
+      outline: 2px solid green;
+    }
+
+    /* :focus-visible */
+    input:focus-visible {
+      border: 2px so orange;
+    }
+
+    /* :focus-within */
+    .form-group:focus-within {
+      background-color: #f9f9f9;
+      border-left: 4px solid royalblue;
+    }
+
+    /* :link and :visited */
+    a:link {
+      color: blue;
+    }
+
+    a:visited {
+      color: grey;
+    }
+
+    /* :target */
+    #section1:target {
+      background-color: yellow;
+      padding: 10px;
+      border: 2px solid black;
+    }
+
+    /* Styling for layout */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .form-group {
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    section {
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Pseudo-class Demonstration</h1>
+
+  <!-- Hover and Active -->
+  <button>Hover & Click Me</button>
+
+  <!-- Focus, Focus-visible, Focus-within -->
+  <div class="form-group">
+    <label for="name">Focus Me</label>
+    <input type="text" id="name" placeholder="Click here">
+  </div>
+
+  <!-- Link and Visited -->
+  <p>
+    <a href="#section1">Go to Section 1</a> |
+    <a href="https://example.com" target="_blank">External Link</a>
+  </p>
+
+  <!-- Target -->
+  <section id="section1">
+    <h2>Section 1</h2>
+    <p>This section is highlighted when targeted with a URL fragment.</p>
+  </section>
+
+</body>
+</html>
